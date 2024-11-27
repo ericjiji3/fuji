@@ -48,6 +48,15 @@ body:after {
   -webkit-animation: flicker .15s infinite;
   animation: flicker .15s infinite;
 }
+.grid{
+  background-image: url('@/../../../public/images/desktop-grid.png');
+  background-size: cover;
+}
+@media(max-width: 1000px){
+  .grid{
+    background-image: url('@/../../../public/images/mobile-grid.png');
+  }
+}
 @keyframes flicker {
   0% {
     opacity: 0.27861;

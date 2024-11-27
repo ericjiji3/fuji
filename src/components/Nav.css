@@ -7,7 +7,9 @@
     padding: 10px 15px;
     align-items: center;
     color: #F4FFFF;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 2;
     font-size: 1.75rem;
 }

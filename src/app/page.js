@@ -7,12 +7,12 @@ export default function Home() {
   return (
     <div className="home-container">
       <div className="links-container">
-          <div className="link-container">
+          <Link href="/clients" className="link-container">
             <div className="image-container">
               <Image src={ClientButton} width={285} height={285} alt="oops"/>
             </div>
             <span>CLIENTS</span>
-          </div>
+          </Link>
           <div className="link-container">
             <div className="image-container">
               <Image src={ClientButton} width={285} height={285} alt="oops"/>
