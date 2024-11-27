@@ -9,7 +9,10 @@
     --foreground: #ededed;
   }
 }
-
+@font-face {
+  font-family: 'nintendo';
+  src: url('@/../../../public/fonts/Nintendo-DS-BIOS.ttf');
+}
 html,
 body {
   max-width: 100vw;
@@ -17,11 +20,99 @@ body {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'nintendo';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+body:after, body:before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 105;
+  pointer-events: none;
+}
+body:before {
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgb(0 0 0 / 16%) 0), linear-gradient(90deg, rgba(255, 0, 0, .06), rgb(0 255 0 / 3%), rgb(0 0 255 / 0%));
+  /* background-image: url('@/../../../public/images/crt.jpeg');
+  background-color: rgba(255,255,255,0.05); */
+  background-blend-mode: lighten;
+  background-size: 100% 2px, 3px 100%;
+}
+body:after {
+  background: rgb(18 16 16 / 6%);
+  opacity: 0;
+  -webkit-animation: flicker .15s infinite;
+  animation: flicker .15s infinite;
+}
+@keyframes flicker {
+  0% {
+    opacity: 0.27861;
+  }
+  5% {
+    opacity: 0.34769;
+  }
+  10% {
+    opacity: 0.23604;
+  }
+  15% {
+    opacity: 0.90626;
+  }
+  20% {
+    opacity: 0.18128;
+  }
+  25% {
+    opacity: 0.83891;
+  }
+  30% {
+    opacity: 0.65583;
+  }
+  35% {
+    opacity: 0.67807;
+  }
+  40% {
+    opacity: 0.26559;
+  }
+  45% {
+    opacity: 0.84693;
+  }
+  50% {
+    opacity: 0.96019;
+  }
+  55% {
+    opacity: 0.08594;
+  }
+  60% {
+    opacity: 0.20313;
+  }
+  65% {
+    opacity: 0.71988;
+  }
+  70% {
+    opacity: 0.53455;
+  }
+  75% {
+    opacity: 0.37288;
+  }
+  80% {
+    opacity: 0.71428;
+  }
+  85% {
+    opacity: 0.70419;
+  }
+  90% {
+    opacity: 0.7003;
+  }
+  95% {
+    opacity: 0.36108;
+  }
+  100% {
+    opacity: 0.24387;
+  }
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -67,6 +158,9 @@ a {
   display: block;
   text-align: center;
   margin-top: 5px;
+  font-size: 3.5rem;
+  color: #F8EEEE;
+
 }
 .home-container .links-container .link-container .image-container img{
   width: 100%;
@@ -80,6 +174,10 @@ a {
   }
   .home-container .links-container .link-container{
     width: 47%;
+  }
+  .home-container .links-container .link-container span{
+    font-size: 2.75rem;
+  
   }
 }
 @media (prefers-color-scheme: dark) {

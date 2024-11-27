@@ -9,6 +9,7 @@
     color: #F4FFFF;
     position: relative;
     z-index: 2;
+    font-size: 1.75rem;
 }
 .nav-container .profile-container{
     display: flex;

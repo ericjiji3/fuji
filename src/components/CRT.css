@@ -1,15 +1,13 @@
-.crt {
-    background: linear-gradient(to top, #000000, #000000, #333333, #333333);
-    background-size: cover;
-    background-size: 100% 1px;
-    animation: scanlines infinite 55s linear;
+/* .crt {
+    background-image: url('@/../../../public/images/crt.jpeg');
+
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100dvh;
     z-index:5;
-} 
+}  */
 @keyframes scanlines {
   from {
     background-position: 0 0;

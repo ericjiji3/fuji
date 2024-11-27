@@ -15,6 +15,7 @@
     position: absolute;
     top: 25px;
     left: 25px;
+    font-size: 1.5rem;
 }
 .starting-container img{
     position: absolute;
@@ -29,4 +30,5 @@
     left: 50%;
     bottom: 50px;
     transform: translateX(-50%);
+    font-size: 2rem;
 }
