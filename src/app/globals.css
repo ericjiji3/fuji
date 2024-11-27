@@ -17,8 +17,6 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,8 +33,57 @@ a {
   text-decoration: none;
 }
 
+.home-container{
+  background-image: url('@/../../../public/images/desktop-grid.png');
+  width: 100vw;
+  height: 100dvh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.home-container .links-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 70px;
+  width: 100%;
+  justify-content: space-between;
+  row-gap: 15px;
+  column-gap: 10px;
+}
+.home-container .links-container .link-container{
+  border: 7px solid #000000;
+  border-radius: 13px;
+  padding: 15px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, #787878 100%);
+  box-shadow: 0px 4px 4px 0px #00000040;
+  width: 22%;
+}
+.home-container .links-container .link-container span{
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
+.home-container .links-container .link-container .image-container img{
+  width: 100%;
+  height: auto;
+}
+@media(max-width: 1000px){
+  .home-container .links-container{
+    
+    padding: 0 15px;
+
+  }
+  .home-container .links-container .link-container{
+    width: 47%;
+  }
+}
 @media (prefers-color-scheme: dark) {
   html {
-    color-scheme: dark;
+    
   }
 }
