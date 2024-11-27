@@ -48,6 +48,14 @@ body:after {
   -webkit-animation: flicker .15s infinite;
   animation: flicker .15s infinite;
 }
+body:has(.starting-container){
+  height: 100dvh;
+  overflow: hidden;
+}
+body:has(.starting-container.inactive){
+  height: auto;
+  overflow: auto;
+}
 .grid{
   background-image: url('@/../../../public/images/desktop-grid.png');
   background-size: cover;
