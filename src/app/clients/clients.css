@@ -89,8 +89,8 @@
 }
 @media(max-width: 700px){
     .clients-container .card-container .image{
-        width: 100px;
-        height: 100px;
+        width: 85px;
+        height: 85px;
     }
     .clients-container .card-container .description{
         width: 55%;
