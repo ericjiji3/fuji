@@ -15,3 +15,13 @@ export const getClientsEntries = async () => {
     const entries = await client.getEntries({ content_type: "clients" });
     return entries;
 };
+
+export const getVideosEntries = async () => {
+    const entries = await client.getEntries({ content_type: "videosPage" });
+    return entries;
+};
+
+export const getAboutEntries = async () => {
+    const entries = await client.getEntries({ content_type: "aboutPage" });
+    return entries;
+};

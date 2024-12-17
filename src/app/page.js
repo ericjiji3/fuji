@@ -13,24 +13,24 @@ export default function Home() {
             </div>
             <span>CLIENTS</span>
           </Link>
-          <div className="link-container">
+          <Link href="/clients" className="link-container">
             <div className="image-container">
               <Image src={ClientButton} width={285} height={285} alt="oops"/>
             </div>
             <span>CONTACT</span>
-          </div>
-          <div className="link-container">
+          </Link>
+          <Link href="/work" className="link-container">
             <div className="image-container">
               <Image src={ClientButton} width={285} height={285} alt="oops"/>
             </div>
             <span>WORK</span>
-          </div>
-          <div className="link-container">
+          </Link>
+          <Link href="/about" className="link-container">
             <div className="image-container">
               <Image src={ClientButton} width={285} height={285} alt="oops"/>
             </div>
             <span>ABOUT</span>
-          </div>
+          </Link>
       </div>
     </div>
   );

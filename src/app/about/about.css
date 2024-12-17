@@ -1,0 +1,29 @@
+.about-container{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    overflow: hidden;
+}
+.about-container .description-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    line-height: 3.5rem;
+    border: 1px solid #000000;
+    border-radius: 13px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0px 4px 4px 0px #23212140;
+    padding: 20px;
+    width: 85%;
+}
+@media(max-width: 700px){
+    .about-container .description-container{
+        width: calc(100% - 30px);
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
+}

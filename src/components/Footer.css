@@ -1,6 +1,6 @@
 .footer-container{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background: linear-gradient(180deg, #809FB4 0%, #6E94AE 100%);
     border-top: 2px solid #000000;
     position: fixed;
@@ -10,6 +10,22 @@
     padding: 10px 15px;
     z-index: 2;
     font-size: 1.75rem;
+    align-items: center;
+}
+
+.footer-container .back-button .arrow{
+    opacity: 1;
+    transition: all 0.25s ease-in;
+}
+
+.footer-container .back-button .arrow.inactive{
+    opacity: 0;
+    transition: all 0.25s ease-in;
+}
+.footer-container .back-button a:has(.arrow.inactive){
+    
+    pointer-events: none;
+    
 }
 @media(max-width: 1000px){
     .footer-container{
