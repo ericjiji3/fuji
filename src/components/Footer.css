@@ -27,6 +27,31 @@
     pointer-events: none;
     
 }
+.footer-container .light-dark-container{
+    position: relative;
+}
+.footer-container .light-dark-container:hover{
+    cursor: pointer;
+}
+.footer-container .light-dark-container img{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer-container .light-dark-container.dark .sun-icon{
+    opacity: 1;
+}
+.footer-container .light-dark-container.dark .night-icon{
+    opacity: 0;
+}
+.footer-container .light-dark-container.light .sun-icon{
+    opacity: 0;
+}
+.footer-container .light-dark-container.light .night-icon{
+    opacity: 1;
+}
+
 @media(max-width: 1000px){
     .footer-container{
         padding: 20px 15px;

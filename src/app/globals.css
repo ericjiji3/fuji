@@ -56,13 +56,30 @@ body:has(.starting-container.inactive){
   height: auto;
   overflow: auto;
 }
-.grid{
+.grid:has(.light-dark-container.light){
   background-image: url('@/../../../public/images/desktop-grid.png');
   background-size: cover;
+  transition: all 0.25s ease-in;
 }
+.grid:has(.light-dark-container.dark){
+  background-image: url('@/../../../public/images/desktop-dark.png');
+  background-size: cover;
+  transition: all 0.25s ease-in;
+}
+/* .grid:has(.light-dark-container.light) span, .grid:has(.light-dark-container.light) p, .grid:has(.light-dark-container.light) a{
+  color: #000000!important;
+}
+.grid:has(.light-dark-container.dark) span, .grid:has(.light-dark-container.dark) p, .grid:has(.light-dark-container.dark) a{
+  color: #ffffff!important;
+} */
 @media(max-width: 1000px){
-  .grid{
+  .grid:has(.light-dark-container.light){
     background-image: url('@/../../../public/images/mobile-grid.png');
+    transition: all 0.25s ease-in;
+  }
+  .grid:has(.light-dark-container.dark){
+    background-image: url('@/../../../public/images/mobile-dark.png');
+    transition: all 0.25s ease-in;
   }
 }
 @keyframes flicker {
@@ -142,14 +159,15 @@ a {
 }
 
 .home-container{
-  background-image: url('@/../../../public/images/desktop-grid.png');
+  /* background-image: url('@/../../../public/images/desktop-grid.png'); */
   width: 100vw;
   height: 100dvh;
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  left: 0;
+  left: 0; */
   z-index: 1;
 }
+
 .home-container .links-container{
   position: absolute;
   top: 50%;
@@ -168,8 +186,12 @@ a {
   border-radius: 13px;
   padding: 15px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, #787878 100%);
+
+
+
   box-shadow: 0px 4px 4px 0px #00000040;
   width: 22%;
+  
 }
 .home-container .links-container .link-container span{
   display: block;
