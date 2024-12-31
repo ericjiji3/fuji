@@ -66,12 +66,29 @@ body:has(.starting-container.inactive){
   background-size: cover;
   transition: all 0.25s ease-in;
 }
-/* .grid:has(.light-dark-container.light) span, .grid:has(.light-dark-container.light) p, .grid:has(.light-dark-container.light) a{
-  color: #000000!important;
+.grid:has(.light-dark-container.light) span, .grid:has(.light-dark-container.light) p, .grid:has(.light-dark-container.light) a, .grid:has(.light-dark-container.light) h1{
+  color: #0A0A0A!important;
+  transition: all 0.25s ease-in;
 }
-.grid:has(.light-dark-container.dark) span, .grid:has(.light-dark-container.dark) p, .grid:has(.light-dark-container.dark) a{
-  color: #ffffff!important;
-} */
+.grid:has(.light-dark-container.dark) span, .grid:has(.light-dark-container.dark) p, .grid:has(.light-dark-container.dark) a, .grid:has(.light-dark-container.dark) h1{
+  color: #F4FFFF!important;
+  transition: all 0.25s ease-in;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3d3d3d;
+  border-radius: 15px;
+}
 @media(max-width: 1000px){
   .grid:has(.light-dark-container.light){
     background-image: url('@/../../../public/images/mobile-grid.png');
@@ -161,7 +178,7 @@ a {
 .home-container{
   /* background-image: url('@/../../../public/images/desktop-grid.png'); */
   width: 100vw;
-  height: 100dvh;
+  height: 98dvh;
   /* position: absolute;
   top: 0;
   left: 0; */

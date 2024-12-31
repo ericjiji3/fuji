@@ -1,22 +1,41 @@
 .nav-container{
-    background: linear-gradient(180deg, #809FB4 0%, #6E94AE 100%);
+    
     border-bottom: 2px solid #000000;
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding: 10px 15px;
     align-items: center;
-    color: #F4FFFF;
+    color: #000000;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
     font-size: 1.75rem;
+    transition: all 0.25s ease-in;
+}
+.grid:has(.light-dark-container.light) .nav-container{
+    background: linear-gradient(180deg, #809FB4 0%, #6E94AE 100%);
+    transition: all 0.25s ease-in;
+}
+.grid:has(.light-dark-container.dark) .nav-container{
+    background: linear-gradient(180deg, #222222 0%, #AE6E8A 100%);
+    transition: all 0.25s ease-in;
 }
 .nav-container .profile-container{
     display: flex;
     align-items: center;
     gap: 5px;
+    
+}
+
+.grid:has(.light-dark-container.light) .nav-container .profile-container svg path{
+    fill: #F4FFFF;
+    transition: all 0.25s ease-in;
+}
+.grid:has(.light-dark-container.light) .nav-container .profile-container svg path{
+    fill: #0A0A0A;
+    transition: all 0.25s ease-in;
 }
 .nav-container .time-container{
     display: flex;
@@ -24,8 +43,19 @@
 }
 .nav-container .time-container span{
     padding: 0 5px;
+    
+    
+}
+.grid:has(.light-dark-container.dark) .nav-container .time-container span{
+    border-left: 1px solid #F4FFFF;
+    border-right: 1px solid #F4FFFF;
+    transition: all 0.25s ease-in;
+    border-style: none dotted;
+}
+.grid:has(.light-dark-container.light) .nav-container .time-container span{
     border-left: 1px solid #0A0A0A;
     border-right: 1px solid #0A0A0A;
+    transition: all 0.25s ease-in;
     border-style: none dotted;
 }
 .nav-container .time-container span:first-of-type{

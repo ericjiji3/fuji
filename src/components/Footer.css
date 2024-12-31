@@ -12,12 +12,26 @@
     font-size: 1.75rem;
     align-items: center;
 }
-
+.grid:has(.light-dark-container.light) .footer-container{
+    background: linear-gradient(180deg, #809FB4 0%, #6E94AE 100%);
+    transition: all 0.25s ease-in;
+}
+.grid:has(.light-dark-container.dark) .footer-container{
+    background: linear-gradient(180deg, #222222 0%, #AE6E8A 100%);
+    transition: all 0.25s ease-in;
+}
 .footer-container .back-button .arrow{
     opacity: 1;
     transition: all 0.25s ease-in;
 }
-
+.grid:has(.light-dark-container.dark) .arrow{
+    filter: invert(100%) brightness(30);
+    transition: all 0.25s ease-in;
+}
+.grid:has(.light-dark-container.light) .arrow{
+    filter: none;
+    transition: all 0.25s ease-in;
+}
 .footer-container .back-button .arrow.inactive{
     opacity: 0;
     transition: all 0.25s ease-in;

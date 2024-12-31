@@ -25,3 +25,8 @@ export const getAboutEntries = async () => {
     const entries = await client.getEntries({ content_type: "aboutPage" });
     return entries;
 };
+
+export const getContactEntries = async () => {
+    const entries = await client.getEntries({ content_type: "contactPage" });
+    return entries;
+};

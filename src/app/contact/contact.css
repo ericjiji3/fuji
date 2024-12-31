@@ -1,0 +1,237 @@
+.contact-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 100px 0;
+    min-height: 100dvh;
+    position: relative;
+}
+.contact-container .form {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Two columns: large and small */
+    grid-template-rows: 1fr 1fr;  /* Two rows */
+    gap: 10px; /* Spacing between items */
+    width: 80%;
+    height: 600px; /* Adjust to fit your layout */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .grid-item {
+    
+    border: 1px solid #000000;
+  border-radius: 13px;
+  padding: 15px;
+  /* background: linear-gradient(180deg, #ffffff 0%, #bebebe 100%); */
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, #787878 100%);
+
+
+
+  box-shadow: 0px 4px 4px 0px #00000040;
+  }
+  
+  .grid-item.large {
+    grid-column: 1 / 2; /* Span first column */
+    grid-row: 1 / 3;    /* Span both rows */
+  }
+  
+  .grid-item.small {
+    grid-column: 2 / 3; /* Second column */
+  }
+  
+  /* Optional: Customize specific small grid item positions */
+  .grid-item:nth-child(2) {
+    grid-row: 1 / 2; /* Top right */
+  }
+  
+  .grid-item:nth-child(3) {
+    grid-row: 2 / 3; /* Bottom right */
+  }
+  
+  .form-inputs-container label{
+    display: flex;
+    width: 100%;
+    font-size: 3rem;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  .form-inputs-container label:first-child{
+    margin-top: 0;
+  }
+  .form-inputs-container span{
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    width: 15%;
+  }
+  .grid:has(.light-dark-container.dark) .form-inputs-container span{
+    background:#AE6E8A;
+    border: 2px solid #855369;
+    transition: all 0.25s ease-in;
+  }
+  .grid:has(.light-dark-container.light) .form-inputs-container span{
+    background: #b4c2dd;
+    color: #58687f;
+    border: 2px solid #58687f;
+    transition: all 0.25s ease-in;
+  }
+  .form-inputs-container label input, textarea{
+    font-size: 3rem;
+    font-family: 'nintendo';
+    padding: 10px;
+    border: 2px solid #58687f;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+    width: 85%;
+  }
+  .grid:has(.light-dark-container.dark) .form-inputs-container label input, .grid:has(.light-dark-container.dark) textarea{
+    background-color: #0A0A0A;
+    color: #F4FFFF;
+    border: 2px solid #855369;
+    transition: all 0.25s ease-in;
+    
+  }
+  .grid:has(.light-dark-container.light) .form-inputs-container label input, .grid:has(.light-dark-container.light) textarea{
+    background-color: #F4FFFF;
+    color: #0A0A0A;
+    border: 2px solid #58687f;
+    transition: all 0.25s ease-in;
+  }
+  .form-inputs-container textarea{
+    height: 275px;
+  }
+  .form-inputs-container .req-text{
+    opacity: 0;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    
+    background: none!important;
+    border: none!important;
+    font-size: 1rem;
+    transition: all 0.25s ease-in;
+  }
+  .grid:has(.light-dark-container.light) .req-text, .grid:has(.light-dark-container.dark) .req-text{
+    color: #F12B2B!important;
+  }
+  .form-inputs-container .req-text.active{
+    opacity: 1;
+    color: #F12B2B!important;
+    transition: all 0.25s ease-in;
+  }
+  
+  .submit-container .submit-butt{
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 4rem;
+    font-family: 'nintendo';
+    
+    border-radius: 10px;
+  }
+  .submit-container .submit-butt.success .submit-text{
+    color: #2BF142!important;
+  }
+  .submit-container .submit-butt:hover{
+    
+    cursor: pointer;
+  }
+  .grid:has(.light-dark-container.dark) .submit-container .submit-butt{
+    background-color: #0A0A0A;
+    color: #F4FFFF;
+    transition: all 0.25s ease-in;
+  }
+  .grid:has(.light-dark-container.dark) .submit-container .submit-butt:hover{
+    background-color: #1a1a1a;
+  }
+  .grid:has(.light-dark-container.dark) .submit-container .submit-butt img{
+    filter: invert(100%) brightness(30);
+    transition: all 0.25s ease-in;
+  }
+  .grid:has(.light-dark-container.light) .submit-container .submit-butt{
+    background-color: #F4FFFF;
+    color: #0A0A0A;
+    transition: all 0.25s ease-in;
+  }
+  .grid:has(.light-dark-container.light) .submit-container .submit-butt:hover{
+    background-color: #e3ecec;
+  }
+  .grid:has(.light-dark-container.light) .submit-container .submit-butt img{
+    filter: none;
+    transition: all 0.25s ease-in;
+  }
+  .description-container{
+    overflow: hidden;
+  }
+  .description-container .header{
+    font-size: 3rem;
+    padding: 10px;
+  }
+  .description-container span{
+    display: block;
+    
+    border-radius: 10px;
+    border: 2px solid #000000;
+    padding: 10px;
+    font-size: 1.5rem;
+    height: 80%;
+    overflow-y: scroll;
+    
+  }
+  .grid:has(.light-dark-container.dark) .description-container span{
+    background-color: #000000;
+    transition: all 0.25s ease-in;
+  }
+  .grid:has(.light-dark-container.light) .description-container span{
+    background-color: #F4FFFF;
+    transition: all 0.25s ease-in;
+  }
+  .grid:has(.light-dark-container.dark) .description-container p{
+    color: #F4FFFF!important;
+    transition: all 0.25s ease-in;
+  }
+  .grid:has(.light-dark-container.light) .description-container p{
+    color: #0A0A0A!important;
+    transition: all 0.25s ease-in;
+  }
+
+  @media(max-width: 1400px){
+    .contact-container .form {
+        width: 95%;
+    }
+    .form-inputs-container label{
+        font-size: 1.5rem;
+        margin: 5px 0;
+    }
+    .form-inputs-container span{
+        width: 100%;
+        padding: 5px;
+        border-radius: 10px 10px 0 0px;
+      }
+    .form-inputs-container label input, textarea{
+        font-size: 1.5rem;
+        width: 100%;
+        padding: 5px;
+        border-radius: 0px 0px 10px 10px;
+      }
+      .form-inputs-container textarea{
+        height: 250px;
+      }
+      .grid-item{
+        padding: 5px;
+      }
+      .description-container .header{
+        font-size: 2rem;
+        padding: 5px;
+      }
+      .description-container span{
+        padding: 5px;
+        font-size: 1.25rem;
+        height: 85%;
+      }
+      .submit-container .submit-butt{
+        font-size: 2rem;
+
+      }
+  }
