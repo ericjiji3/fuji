@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
-    padding: 100px 0;
+    padding: 100px 0 0;
     min-height: 100dvh;
     position: relative;
 }
@@ -200,7 +200,7 @@
     .contact-container .form {
         width: 95%;
         height: 900px;
-        padding: 75px 0 75px 0;
+        padding: 150px 0 75px 0;
         overflow: auto;
     }
     .form-inputs-container label{
@@ -244,7 +244,7 @@
       .description-container span{
         padding: 5px;
         font-size: 1.25rem;
-        height: 85%;
+        height: 80%;
       }
       .submit-container .submit-butt{
         font-size: 2rem;
