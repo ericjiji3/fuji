@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 import ClientButton from '@/../public/images/client-button.png';
-import Template from "@/components/Template";
+
 
 export default function Home() {
   return (
