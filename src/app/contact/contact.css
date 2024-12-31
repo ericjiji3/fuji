@@ -253,3 +253,11 @@
       
       
   }
+  @media(max-width: 800px){
+    .contact-container{
+
+    }
+    .contact-container .form {
+      padding: 200px 0 75px 0;
+  }
+  }
