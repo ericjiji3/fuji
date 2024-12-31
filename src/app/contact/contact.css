@@ -200,7 +200,7 @@
     .contact-container .form {
         width: 95%;
         height: 900px;
-        padding-top: 100px;
+        padding: 75px 0 75px 0;
         overflow: auto;
     }
     .form-inputs-container label{
