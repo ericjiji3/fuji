@@ -199,6 +199,9 @@
   @media(max-width: 1400px){
     .contact-container .form {
         width: 95%;
+        height: 900px;
+        padding-top: 100px;
+        overflow: auto;
     }
     .form-inputs-container label{
         font-size: 1.5rem;
@@ -216,10 +219,23 @@
         border-radius: 0px 0px 10px 10px;
       }
       .form-inputs-container textarea{
-        height: 250px;
+        height: 150px;
       }
       .grid-item{
         padding: 5px;
+      }
+      .grid-item.large {
+        grid-column: 1 / 3; /* Span first column */
+        grid-row: 1 / 2;    /* Span both rows */
+       
+      }
+      
+      .grid-item.small {
+        grid-column: 2 / 3; /* Second column */
+        grid-row: 2 / 3;
+      }
+      .grid-item.small.description-container{
+        grid-column: 1 / 2;
       }
       .description-container .header{
         font-size: 2rem;
@@ -234,4 +250,6 @@
         font-size: 2rem;
 
       }
+      
+      
   }
