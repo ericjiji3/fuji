@@ -63,3 +63,12 @@
         margin-right: 5px;
     }
 }
+@media(max-width: 1000px){
+    .about-container{
+        overflow: scroll;
+    }
+    .about-container .description-container{
+        position: relative;
+        margin: 100px 0;
+    }
+}

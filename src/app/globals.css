@@ -215,12 +215,19 @@ a {
   text-align: center;
   margin-top: 5px;
   font-size: 3.5rem;
-  color: #F8EEEE;
+  color: #F8EEEE!important;
 
 }
+.home-container .links-container .link-container .image-container{
+  text-align: center;
+  margin: 30px 0 15px;
+}
 .home-container .links-container .link-container .image-container img{
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 125px;
+}
+.grid:has(.light-dark-container.dark) .home-container .links-container .link-container .image-container img{
+  filter:invert(1);
 }
 @media(max-width: 1000px){
   .home-container .links-container{
@@ -230,6 +237,10 @@ a {
   }
   .home-container .links-container .link-container{
     width: 47%;
+  }
+  .home-container .links-container .link-container .image-container img{
+    width: auto;
+    height: 100px;
   }
   .home-container .links-container .link-container span{
     font-size: 2.75rem;
