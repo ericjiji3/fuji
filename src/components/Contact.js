@@ -155,10 +155,10 @@ export default function ContactForm(props){
                         <textarea type="text" name="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                     </label>
                 </div>
-                <div className="grid-item small description-container">
+                {/* <div className="grid-item small description-container">
                     <p className='header'>{props.header}</p>
                     <span>{documentToReactComponents(props.description,options)}  </span>
-               </div>
+               </div> */}
                 <div className="grid-item small submit-container">
                     <button className="submit-butt" type="submit" value="submit" ref={buttonRef}><span className='submit-text'>{success ? 'Success!' : 'Submit'}</span><span className="loading-animation"></span><div className="checkmark"></div><Image src={Envelope} width={35} alt="oops"/></button>
                 </div>

@@ -46,10 +46,12 @@
     width: 50%;
 }
 .clients-container .card-container .description .green{
-    color: #2BF142!important;
+    background-color: #2BF142!important;
+    color: black!important;
 }
 .clients-container .card-container .description .red{
-    color: #F12B2B!important;
+    background-color: #F12B2B!important;
+    color: black!important;
 }
 .clients-container .card-container .description .client-name{
     font-size: 2.5rem;
