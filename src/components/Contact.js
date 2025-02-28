@@ -85,12 +85,12 @@ export default function ContactForm(props){
                     setNameErr(true);
                 }
             }
-            if(field === 'phone'){
-                if(!data[field]){
-                    validate = false;
-                    setPhoneErr(true);
-                }
-            }
+            // if(field === 'phone'){
+            //     if(!data[field]){
+            //         validate = false;
+            //         setPhoneErr(true);
+            //     }
+            // }
         })
         return validate;
     }
@@ -140,16 +140,17 @@ export default function ContactForm(props){
                         <input className="smaller" type="text" name="name" value={name} onChange={(e) => setName(e.target.value)}/>
                         <span className={nameErr ? 'req-text active' : 'req-text'}>*Required Field</span>
                     </label>
-                    <label className="phone-input">
-                        <span className="req">Phone</span>
-                        <input type="text" name="phone" value={phone} onChange={(e) => setPhone(e.target.value)}/>
-                        <span className={phoneErr ? 'req-text active' : 'req-text'}>*Required Field</span>
-                    </label>
-                        <label className="email-input">
+                    <label className="email-input">
                         <span className="req">Email</span>
                         <input type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                         <span className={emailErr ? 'req-text active' : 'req-text'}>*Required Field / Invalid Input</span>
                     </label>
+                    <label className="phone-input">
+                        <span className="req">Phone</span>
+                        <input type="text" name="phone" value={phone} onChange={(e) => setPhone(e.target.value)}/>
+                        {/* <span className={phoneErr ? 'req-text active' : 'req-text'}>*Required Field</span> */}
+                    </label>
+                    
                     <label className="message-input">
                         <span>Message</span>
                         <textarea type="text" name="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>

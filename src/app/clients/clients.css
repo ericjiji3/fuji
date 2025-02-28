@@ -5,16 +5,18 @@
     justify-content: center;
     padding: 100px 0;
     min-height: 100dvh;
+    /* padding-left: 20px; */
 }
 .clients-container .card-container{
-    width: 48%;
+    width: 32.33%;
     display: flex;
     justify-content: space-between;
     border: 1px solid #000000;
     border-radius: 13px;
     backdrop-filter: blur(4px);
     box-shadow: 0px 4px 4px 0px #23212140;
-    background: #FFFFFF80;
+    /* background: #FFFFFF80; */
+    background: #FFFFFF;
     padding: 20px;
 
 }
@@ -50,14 +52,14 @@
     color: black!important;
 }
 .clients-container .card-container .description .red{
-    background-color: #F12B2B!important;
+    /* background-color: #F12B2B!important; */
     color: black!important;
 }
 .clients-container .card-container .description .client-name{
     font-size: 2.5rem;
 }
 .clients-container .card-container .description .timeline, .followers, .views, .watchtime{
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 .clients-container .card-container .socials{
     display: flex;
@@ -78,6 +80,10 @@
     transition: all 0.25s ease-in;
 }
 @media(max-width: 1000px){
+    .clients-container{
+        justify-content: center;
+        padding-left: 0;
+    }
     .clients-container .card-container{
         width: 85%;
         
