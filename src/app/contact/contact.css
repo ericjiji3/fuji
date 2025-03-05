@@ -35,6 +35,8 @@
   .grid-item.large {
     grid-column: 1 / 2; /* Span first column */
     grid-row: 1 / 3;    /* Span both rows */
+    width: 100%;
+    
   }
   
   .grid-item.small {

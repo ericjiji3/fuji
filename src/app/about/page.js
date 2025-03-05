@@ -4,8 +4,8 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
 import Link from 'next/link';
 import Instagram from '@/../public/images/Instagram.png';
-import Twitch from '@/../public/images/Twitch.png';
-import Youtube from '@/../public/images/Youtube.png';
+import Twitch from '@/../public/images/Linkedin.png';
+import Youtube from '@/../public/images/Twitter.png';
 import Image from 'next/image';
 
 const options = {
@@ -66,9 +66,9 @@ export default async function About(){
             <div className='description-container'>
             {documentToReactComponents(description,options)}  
             <div className='socials-container'>
-                <a href=""><Image src={Twitch} width={24} height={24} alt="oops"/>@fuji</a>
-                <a href=""><Image src={Instagram} width={24} height={24} alt="oops"/>@fuji</a>
-                <a href=""><Image src={Youtube} width={24} height={24} alt="oops"/>@fuji</a>
+                <a href="https://www.linkedin.com/company/fuji-digital-media?original_referer=https%3A%2F%2Fwww.google.com%2F" target='_blank'><Image src={Twitch} width={24} height={24} alt="oops"/></a>
+                <a href="https://www.instagram.com/analytics/" target='_blank'><Image src={Instagram} width={24} height={24} alt="oops"/></a>
+                <a href="https://x.com/fujimedia?lang=en" target='_blank'><Image src={Youtube} width={24} height={24} alt="oops"/></a>
             </div>
             </div>
             
