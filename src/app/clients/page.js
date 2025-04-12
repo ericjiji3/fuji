@@ -40,7 +40,7 @@ export default async function Clients(){
                                         {
                                             client.fields.socialMedias.map((social, index) => {
                                                 return(
-                                                    <Socials id={social.sys.id}/>
+                                                    <Socials key={index} id={social.sys.id}/>
                                                 )
                                             })
                                         }
