@@ -62,10 +62,17 @@
     border-right: none;
     border-style: none none none dotted;
 }
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 .nav-container .time-container img{
     padding: 0 0 0 5px;
     height: 20px;
     width: auto;
+    animation: blink 1.5s infinite linear;
 }
 @media(max-width: 1000px){
     .nav-container{

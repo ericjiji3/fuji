@@ -16,6 +16,11 @@ export const getClientsEntries = async () => {
     return entries;
 };
 
+export const getEntry = async (id) => {
+    const entries = await client.getEntry(id);
+    return entries;
+};
+
 export const getVideosEntries = async () => {
     const entries = await client.getEntries({ content_type: "videosPage" });
     return entries;

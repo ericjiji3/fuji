@@ -10,9 +10,24 @@
     
     /* padding-left: 20px; */
 }
+.grid:has(.light-dark-container.dark) .clients-container .card-container .description .client-name{
+    color: black!important;
+}
+.grid:has(.light-dark-container.dark) .submit-text{
+    color: #000000!important;
+}
+.grid:has(.light-dark-container.dark) .clients-container .card-container .socials .socials-header{
+    color: black!important;
+}
+.grid:has(.light-dark-container.dark) .clients-container .card-container .socials img{
+    filter: none!important;
+}
+/* .grid:has(.light-dark-container.dark) .clients-container .card-container .socials img{
+    filter: invert(100%) brightness(30);
+} */
 .clients-container .card-container{
     /* width: 32.33%; */
-    flex: 20.5%;
+    flex: 24% 0;
     display: flex;
     justify-content: space-between;
     border: 1px solid #000000;
@@ -29,8 +44,8 @@
 }
 .clients-container .card-container .image{
     border-radius: 50%;
-    width: 125px;
-    height: 125px;
+    width: 150px;
+    height: 150px;
     overflow: hidden;
     max-width: 50%;
 }
@@ -104,11 +119,48 @@
     filter: invert(100%) brightness(30);
     transition: all 0.25s ease-in;
 }
+.contact-link{
+    /* border: 1px solid #000000;
+    border-radius: 13px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px); */
+    /* box-shadow: 0px 4px 4px 0px #23212140; */
+    /* background: #FFFFFF80; */
+    /* background: #FFFFFF; */
+    padding: 15px;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 75px;
+}
+.contact-link a{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: fit-content;
+    background-color: #F4FFFF;
+    color: #0A0A0A;
+    font-size: 1rem;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+}
+.grid:has(.light-dark-container.light) .contact-link a:hover{
+    background-color: #e3ecec;
+  }
+.contact-link a img{
+    margin: 0 auto;
+    margin-top: 15px;
+}
+/* .contact-link  */
 @media(max-width: 1500px){
     .clients-container .card-container{
-        height: 200px;
-        min-height: 200px;
+        height: 160px;
+        min-height: 160px;
         padding: 10px;
+    }
+    .clients-container .card-container .image{
+        width: 110px;
+        height: 110px;
     }
     .clients-container .card-container .description .client-name{
         font-size: 1.75rem;
@@ -128,10 +180,23 @@
     }
 }
 @media(max-width: 1000px){
+    .contact-link{
+        margin-top: 50px;
+    }
+    .contact-link a{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 25px;
+    }
+    .contact-link a img{
+        margin: 0;
+    }
     .clients-container .card-container{
         height: 300px;
         min-height: 300px;
-        padding: 10px;
+        padding: 15px;
     }
     /* .clients-container{
         justify-content: center;
@@ -148,12 +213,18 @@
     }
     .clients-container .card-container .description{
         width: 100%;
+        text-align: center;
     }
     .clients-container .card-container .description .client-name{
         font-size: 1.5rem;
+        margin-bottom: 10px;
     }
     .clients-container .card-container .description .timeline, .followers, .views, .watchtime{
         font-size: 1rem;
+    }
+    .clients-container .card-container .socials .social-logos{
+        justify-content: center;
+        gap: 15px;
     }
     .clients-container .card-container .socials img{
         width: 25px;
@@ -161,18 +232,29 @@
     }
 }
 @media(max-width: 700px){
+    .clients-container .card-container{
+        flex-direction: row;
+        width: 100%;
+        flex: 100%;
+        height: 100%;
+        min-height: auto!important;
+    }
     .clients-container .card-container .image{
-        width: 85px;
-        height: 85px;
+        width: 100px;
+        height: 100px;
     }
     .clients-container .card-container .description{
         width: 55%;
+        text-align: left;
     }
     .clients-container .card-container .description .client-name{
         font-size: 2rem;
     }
     .clients-container .card-container .description .timeline, .followers, .views, .watchtime{
         font-size: 1rem;
+    }
+    .clients-container .card-container .socials .social-logos{
+        justify-content: start;
     }
     .clients-container .card-container .socials img{
         width: 24px;

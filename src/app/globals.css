@@ -46,7 +46,7 @@ body:after {
   background: rgb(18 16 16 / 6%);
   opacity: 0;
   -webkit-animation: flicker .15s infinite;
-  animation: flicker .15s infinite;
+  animation: flicker .3s infinite;
 }
 body:has(.starting-container){
   height: 100dvh;
@@ -55,6 +55,15 @@ body:has(.starting-container){
 body:has(.starting-container.inactive){
   height: auto;
   overflow: auto;
+}
+@keyframes textBlink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+.starting-container .start-text{
+  color: red!important;
+  animation: textBlink 1.25s infinite linear;
 }
 .grid:has(.light-dark-container.light){
   background-image: url('@/../../../public/images/desktop-grid.png');
@@ -110,52 +119,52 @@ body:has(.starting-container.inactive){
     opacity: 0.23604;
   }
   15% {
-    opacity: 0.90626;
+    opacity: 0.30626;
   }
   20% {
     opacity: 0.18128;
   }
   25% {
-    opacity: 0.83891;
+    opacity: 0.23891;
   }
   30% {
-    opacity: 0.65583;
+    opacity: 0.45583;
   }
   35% {
-    opacity: 0.67807;
+    opacity: 0.57807;
   }
   40% {
     opacity: 0.26559;
   }
   45% {
-    opacity: 0.84693;
+    opacity: 0.34693;
   }
   50% {
-    opacity: 0.96019;
+    opacity: 0.26019;
   }
   55% {
-    opacity: 0.08594;
+    opacity: 0.58594;
   }
   60% {
     opacity: 0.20313;
   }
   65% {
-    opacity: 0.71988;
+    opacity: 0.31988;
   }
   70% {
     opacity: 0.53455;
   }
   75% {
-    opacity: 0.37288;
+    opacity: 0.47288;
   }
   80% {
-    opacity: 0.71428;
+    opacity: 0.51428;
   }
   85% {
-    opacity: 0.70419;
+    opacity: 0.40419;
   }
   90% {
-    opacity: 0.7003;
+    opacity: 0.2003;
   }
   95% {
     opacity: 0.36108;
@@ -215,8 +224,13 @@ a {
   text-align: center;
   margin-top: 5px;
   font-size: 3.5rem;
-  color: #F8EEEE!important;
+  color: #ffffff!important;
+  transition: all 0.25s ease-in;
 
+}
+.grid:has(.light-dark-container.dark) .home-container .links-container .link-container span{
+  color: #000000!important;
+  transition: all 0.25s ease-in;
 }
 .home-container .links-container .link-container .image-container{
   text-align: center;
@@ -228,6 +242,13 @@ a {
 }
 .grid:has(.light-dark-container.dark) .home-container .links-container .link-container .image-container img{
   filter:invert(1);
+}
+.grid:has(.light-dark-container.dark) .home-container .links-container .link-container{
+  border-color: white!important;
+  transition: all 0.25s ease-in;
+}
+.grid:has(.light-dark-container.dark) .home-container .links-container .link-container:hover{
+  border-color: #000000!important;
 }
 @media(max-width: 1000px){
   .home-container .links-container{

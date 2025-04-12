@@ -2,8 +2,11 @@ import Image from "next/image";
 import { getClientsEntries } from "@/utils/contentful";
 import Instagram from '@/../public/images/Instagram.png';
 import Twitch from '@/../public/images/Twitch.png';
+import Envelope from '@/../public/images/Envelope.png';
 import Youtube from '@/../public/images/Youtube.png';
+import Link from 'next/link';
 import './clients.css';
+import Socials from "@/components/Socials";
 
 export default async function Clients(){
     const data = await getClientsEntries();
@@ -14,7 +17,7 @@ export default async function Clients(){
         <div className="clients-container">
             {
                 filteredData.map((client, index) => {
-                    console.log(client.fields);
+                    console.log(client.fields.clientImage);
                     return(
                         <div key={index} className="card-container">
                             <div className="image">
@@ -34,10 +37,16 @@ export default async function Clients(){
                                 <div className="socials">
                                     <span className="socials-header">Managed Socials</span>
                                     <div className="social-logos">
-
-                                        <a href={client.fields.twitchLink}><Image src={Twitch} width={24} height={24} alt="oops"/></a>
+                                        {
+                                            client.fields.socialMedias.map((social, index) => {
+                                                return(
+                                                    <Socials id={social.sys.id}/>
+                                                )
+                                            })
+                                        }
+                                        {/* <a href={client.fields.twitchLink}><Image src={Twitch} width={24} height={24} alt="oops"/></a>
                                         <a href={client.fields.instagramLink}><Image src={Instagram} width={24} height={24} alt="oops"/></a>
-                                        <a href={client.fields.youtubeLink}><Image src={Youtube} width={24} height={24} alt="oops"/></a>
+                                        <a href={client.fields.youtubeLink}><Image src={Youtube} width={24} height={24} alt="oops"/></a> */}
                                     </div>
                                 </div>
                             </div>
@@ -46,6 +55,13 @@ export default async function Clients(){
                     )
                 })
             }
+        </div>
+        <div className="contact-link">
+            <Link href="/contact">
+            <h1 className='submit-text'>Request Full Client List + Stats Breakdown</h1>
+                <Image src={Envelope} width={35} alt="oops"/>
+                
+            </Link>
         </div>
         </div>
     )

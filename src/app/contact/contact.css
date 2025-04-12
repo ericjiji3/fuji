@@ -163,6 +163,10 @@
     filter: none;
     transition: all 0.25s ease-in;
   }
+  .grid:has(.light-dark-container.dark) .submit-container .submit-butt .submit-text{
+    color: #ffffff!important;
+    transition: all 0.25s ease-in;
+  }
   .description-container{
     overflow: hidden;
   }
