@@ -99,7 +99,7 @@
 .clients-container .card-container .socials .social-logos{
     display: flex;
     gap: 10px;
-    justify-content: space-between;
+    justify-content: start;
 }
 .clients-container .card-container .socials .socials-header{
     font-size: 1.5rem;
@@ -223,7 +223,7 @@
         font-size: 1rem;
     }
     .clients-container .card-container .socials .social-logos{
-        justify-content: center;
+        justify-content: start;
         gap: 15px;
     }
     .clients-container .card-container .socials img{
